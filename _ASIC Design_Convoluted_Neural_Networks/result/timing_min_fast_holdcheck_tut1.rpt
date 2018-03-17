@@ -1,0 +1,49 @@
+Information: Updating design information... (UID-85)
+Warning: Design 'MyDesign' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay min
+        -max_paths 1
+Design : MyDesign
+Version: K-2015.06-SP1
+Date   : Sun Nov 12 19:47:14 2017
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: fast   Library: NangateOpenCellLibrary_PDKv1_2_v2008_10_fast_nldm
+Wire Load Model Mode: top
+
+  Startpoint: clk_r_REG788_S4
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: clk_r_REG789_S5
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  clk_r_REG788_S4/CK (DFFS_X2)           0.0000 #   0.0000 r
+  clk_r_REG788_S4/Q (DFFS_X2)            0.0674     0.0674 r
+  U9679/ZN (OAI22_X2)                    0.0154     0.0829 f
+  clk_r_REG789_S5/D (DFFR_X1)            0.0000     0.0829 f
+  data arrival time                                 0.0829
+
+  clock clk (rise edge)                  0.0000     0.0000
+  clock network delay (ideal)            0.0000     0.0000
+  clock uncertainty                      0.0500     0.0500
+  clk_r_REG789_S5/CK (DFFR_X1)           0.0000     0.0500 r
+  library hold time                      0.0022     0.0522
+  data required time                                0.0522
+  -----------------------------------------------------------
+  data required time                                0.0522
+  data arrival time                                -0.0829
+  -----------------------------------------------------------
+  slack (MET)                                       0.0306
+
+
+1

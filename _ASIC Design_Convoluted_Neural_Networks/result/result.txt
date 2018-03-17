@@ -1,0 +1,6 @@
+area =25180.3581um2
+Number of cycles = 11710/10=11710.
+clock period= 7ns
+performance = area x number of cycles xclock period
+	    = 25180.3581 x 1171 x 7
+	    = 206,403,395.3457
